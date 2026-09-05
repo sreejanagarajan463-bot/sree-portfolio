@@ -2735,3 +2735,25 @@ transform:
     display: block !important;
     transform: none !important;
 }
+/* FINAL ABOUT PHOTO SIZE FIX */
+
+.about-photo-wrapper {
+    width: 155px !important;
+    height: 155px !important;
+    padding: 4px !important;
+}
+
+.about-photo-wrapper img,
+.about-photo-wrapper .profile-image,
+.about-photo-wrapper .about-photo {
+    width: 145px !important;
+    height: 145px !important;
+
+    min-width: 145px !important;
+    min-height: 145px !important;
+    max-width: 145px !important;
+    max-height: 145px !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
