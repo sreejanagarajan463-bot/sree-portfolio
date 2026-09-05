@@ -2618,3 +2618,53 @@ transform:
   border-radius: 50%;
   display: block;
 }
+/* ==============================
+   FIX PROFILE IMAGE - PERFECT CIRCLE
+   ============================== */
+
+.profile-image {
+    width: 285px !important;
+    height: 285px !important;
+
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    display: block !important;
+    flex-shrink: 0 !important;
+}
+
+/* Hero section profile image */
+.hero-visual .profile-image {
+    width: 285px !important;
+    height: 285px !important;
+
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
+
+/* Keep image inside a square circle */
+.hero-visual {
+    display: grid;
+    place-items: center;
+}
+
+.hero-image-ring {
+    width: 300px !important;
+    height: 300px !important;
+
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+}
+
+/* Glow must also stay circular */
+.hero-image-glow {
+    width: 300px !important;
+    height: 300px !important;
+
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+}
