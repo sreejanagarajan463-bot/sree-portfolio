@@ -2668,3 +2668,31 @@ transform:
     aspect-ratio: 1 / 1 !important;
     border-radius: 50% !important;
 }
+/* =================================
+   FIX ABOUT ME PHOTO SIZE
+   ================================= */
+
+.about-photo-wrapper {
+    width: 190px !important;
+    height: 190px !important;
+    padding: 5px !important;
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.about-photo-wrapper .profile-image,
+.about-photo-wrapper .about-photo {
+    width: 180px !important;
+    height: 180px !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    border-radius: 50% !important;
+}
