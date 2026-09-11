@@ -2904,3 +2904,87 @@ transform:
         grid-template-columns: 1fr;
     }
 } 
+/* =========================================
+   ULTRA-PREMIUM UI UPGRADES
+========================================= */
+
+/* 1. Global Ambient Background Glows */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::before {
+    background: var(--red);
+    top: 20%;
+    left: -100px;
+}
+
+body::after {
+    background: var(--blue);
+    bottom: 20%;
+    right: -100px;
+}
+
+/* 2. Glassmorphism & Animated Gradient Borders for Cards */
+.skill-card, 
+.project-card, 
+.education-card, 
+.achievement, 
+.quick-card, 
+.about-profile-card {
+    background: rgba(18, 18, 22, 0.75) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                box-shadow 0.4s ease, 
+                border-color 0.4s ease !important;
+}
+
+/* Hover Aura & Lift */
+.skill-card:hover, 
+.project-card:hover, 
+.education-card:hover, 
+.quick-card:hover, 
+.about-profile-card:hover {
+    transform: translateY(-10px) scale(1.01) !important;
+    border-color: rgba(85, 207, 255, 0.4) !important;
+    box-shadow: 0 20px 40px rgba(85, 207, 255, 0.15), 
+                0 0 20px rgba(255, 49, 88, 0.1) !important;
+}
+
+/* 3. Dynamic Text Gradient for Main Headings */
+.section-heading h2 {
+    background: linear-gradient(135deg, #ffffff 30%, var(--blue) 70%, var(--red) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+/* 4. Glowing Navbar Glass Effect */
+.navbar {
+    background: rgba(7, 7, 7, 0.75) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* 5. Modern Pill Badges */
+.skill-level, 
+.edu-badge, 
+.project-status, 
+.about-badge {
+    box-shadow: 0 0 12px rgba(85, 207, 255, 0.2);
+}
